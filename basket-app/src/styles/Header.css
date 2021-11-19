@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.logo {
+  font-size: 2em;
+}
