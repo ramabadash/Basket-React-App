@@ -13,7 +13,7 @@ export class Main extends Component {
     return (
       <main>
         <GroceriesList groceriesArr={groceriesArr} onItemClick={this.updateBasket} />
-        <BasketList basketItems={this.state.basketItems} />
+        <BasketList basketItems={this.state.basketItems} onClearBasket={this.clearBasket} />
       </main>
     );
   }
@@ -33,6 +33,10 @@ export class Main extends Component {
       basketItems[name] = 1; // First click
     }
     this.setState({ basketItems }); //Update basketItems state
-    console.log(this.state.basketItems);
+  };
+
+  clearBasket = (event) => {
+    const basketItems = {};
+    this.setState({ basketItems });
   };
 }
