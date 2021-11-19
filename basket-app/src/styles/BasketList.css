@@ -6,3 +6,7 @@
 .basket-container {
   width: 45%;
 }
+.basket-list {
+  height: 20em;
+  overflow-y: auto;
+}

@@ -6,3 +6,7 @@
 .groceries-container {
   width: 45%;
 }
+.groceries-list {
+  height: 20em;
+  overflow-y: auto;
+}
