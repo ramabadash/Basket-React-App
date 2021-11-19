@@ -11,7 +11,7 @@ export class GroceriesList extends Component {
     return (
       <main>
         <h2>
-          <i class='fas fa-leaf'></i>
+          <i className='fas fa-leaf'></i>
           Groceries:
         </h2>
         <ul className='groceries-list'>

@@ -7,7 +7,7 @@ export class Header extends Component {
       <header className='header'>
         <h1>My Shopping Basket</h1>
         <div>
-          <i class='fas fa-shopping-basket logo'></i>
+          <i className='fas fa-shopping-basket logo'></i>
         </div>
       </header>
     );
