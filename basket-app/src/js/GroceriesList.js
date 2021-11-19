@@ -9,7 +9,7 @@ export class GroceriesList extends Component {
   }
   render() {
     return (
-      <main>
+      <>
         <h2>
           <i className='fas fa-leaf'></i>
           Groceries:
@@ -19,7 +19,7 @@ export class GroceriesList extends Component {
             <GroceriesItem key={item} item={item} addItem={this.props.onItemClick} />
           ))}
         </ul>
-      </main>
+      </>
     );
   }
 }

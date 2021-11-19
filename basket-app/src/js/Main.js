@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { groceriesArr } from '../data/groceriesData';
+import { BasketList } from './BasketList';
 import { GroceriesList } from './GroceriesList';
 
 export class Main extends Component {
@@ -11,7 +12,7 @@ export class Main extends Component {
     return (
       <main>
         <GroceriesList groceriesArr={groceriesArr} onItemClick={this.updateBasket} />
-        <h2> Basket List </h2> {/* TODO - replace with component - BasketList*/}
+        <BasketList basketItems={this.state.basketItems} />
       </main>
     );
   }
