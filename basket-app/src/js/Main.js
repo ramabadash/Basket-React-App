@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { groceriesArr } from '../data/groceriesData';
 import { BasketList } from './BasketList';
 import { GroceriesList } from './GroceriesList';
+import '../styles/Main.css';
 
 export class Main extends Component {
   constructor(props) {

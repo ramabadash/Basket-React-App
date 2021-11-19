@@ -1,0 +1,6 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: rgba(80, 63, 60, 0.548); */
+}

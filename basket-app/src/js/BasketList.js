@@ -9,13 +9,13 @@ export class BasketList extends Component {
   }
   render() {
     return (
-      <>
+      <div className='basket-container'>
         <h2>
           <i className='fas fa-shopping-basket logo'></i>
           Basket:
         </h2>
         <ul className='basket-list'>{this.generateItemsToBasket()}</ul>
-      </>
+      </div>
     );
   }
   generateItemsToBasket() {
