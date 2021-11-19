@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { BasketItem } from './BasketItem';
+import '../styles/BasketList.css';
 
 export class BasketList extends Component {
   constructor(props) {
@@ -20,13 +22,7 @@ export class BasketList extends Component {
     const itemsArr = [];
     const basketItems = this.state.basketItems;
     for (const item in basketItems) {
-      itemsArr.push(
-        //TODO - replace to BasketItem component
-        <li key={item}>
-          <i className='far fa-minus-square'></i>
-          {basketItems[item]} {item}
-        </li>
-      );
+      itemsArr.push(<BasketItem key={item} number={basketItems[item]} item={item} />);
     }
     return itemsArr;
   }
