@@ -16,7 +16,7 @@ export class GroceriesList extends Component {
         </h2>
         <ul className='groceries-list'>
           {this.props.groceriesArr.map((item) => (
-            <GroceriesItem item={item} />
+            <GroceriesItem key={item} item={item} addItem={this.props.onItemClick} />
           ))}
         </ul>
       </main>
