@@ -17,3 +17,7 @@
   text-shadow: 0px 10px 10px rgba(243, 243, 243, 0.4);
   color: rgb(119, 5, 5);
 }
+
+.bought {
+  text-decoration: line-through;
+}

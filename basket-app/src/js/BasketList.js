@@ -24,6 +24,7 @@ export class BasketList extends Component {
   generateItemsToBasket() {
     // this.setState({ basketItems: this.props.basketItems });
     console.log(this.props.basketItems);
+    console.log(this.state.basketItems);
     const itemsArr = [];
     const basketItems = this.state.basketItems;
     for (const item in basketItems) {

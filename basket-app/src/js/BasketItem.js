@@ -8,10 +8,17 @@ export class BasketItem extends Component {
   }
   render() {
     return (
-      <li className='basket-item'>
+      <li className='basket-item' onClick={this.markAsBought}>
         <i className='far fa-minus-square'></i>
         {this.props.number} {this.props.item}
       </li>
     );
   }
+  markAsBought = (event) => {
+    if (event.target.tagName !== 'li') {
+      event.target.closest('li').classList.toggle('bought'); //Click on the li child element
+    } else {
+      event.target.classList.toggle('bought'); //Click on the li element
+    }
+  };
 }
