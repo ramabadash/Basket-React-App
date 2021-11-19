@@ -8,12 +8,10 @@ export class GroceriesItem extends Component {
   }
   render() {
     return (
-      <div className='item-container'>
-        <label className='plus'>
-          <i class='far fa-plus-square'></i>
-        </label>
-        <li className='grocery-item'> {this.props.item} </li>
-      </div>
+      <li className='grocery-item item-container' onClick={this.props.addItem}>
+        <i className='far fa-plus-square'></i>
+        {this.props.item}
+      </li>
     );
   }
 }
