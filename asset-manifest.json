@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Basket-React-App/static/css/main.4cbd63ef.chunk.css",
+    "main.js": "/Basket-React-App/static/js/main.50192a0b.chunk.js",
+    "main.js.map": "/Basket-React-App/static/js/main.50192a0b.chunk.js.map",
+    "runtime-main.js": "/Basket-React-App/static/js/runtime-main.fc24c5d1.js",
+    "runtime-main.js.map": "/Basket-React-App/static/js/runtime-main.fc24c5d1.js.map",
+    "static/js/2.d5f95eb9.chunk.js": "/Basket-React-App/static/js/2.d5f95eb9.chunk.js",
+    "static/js/2.d5f95eb9.chunk.js.map": "/Basket-React-App/static/js/2.d5f95eb9.chunk.js.map",
+    "index.html": "/Basket-React-App/index.html",
+    "static/css/main.4cbd63ef.chunk.css.map": "/Basket-React-App/static/css/main.4cbd63ef.chunk.css.map",
+    "static/js/2.d5f95eb9.chunk.js.LICENSE.txt": "/Basket-React-App/static/js/2.d5f95eb9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc24c5d1.js",
+    "static/js/2.d5f95eb9.chunk.js",
+    "static/css/main.4cbd63ef.chunk.css",
+    "static/js/main.50192a0b.chunk.js"
+  ]
+}
