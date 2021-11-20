@@ -6,7 +6,9 @@ export class Footer extends Component {
     return (
       <footer className='footer'>
         {'Filter by - '}
-        <label>All</label>
+        <label className='active' onClick={this.showAll}>
+          All
+        </label>
         {', '}
         <label>Pending</label>
         {', '}
@@ -20,7 +22,8 @@ export class Footer extends Component {
   }
   //Show only bought items
   showPurchsed(event) {
-    event.target.classList.add('active'); //show label as active
+    document.querySelector('.active').classList.remove('active'); //Remove last active label
+    event.target.classList.add('active'); //show target label as active
     const basketItemsElem = document.querySelectorAll('.basket-item');
     basketItemsElem.forEach((item) => {
       if (!item.classList.contains('bought')) {
@@ -28,6 +31,15 @@ export class Footer extends Component {
       } else {
         return;
       }
+    });
+  }
+  //Show all items on basket
+  showAll(event) {
+    document.querySelector('.active').classList.remove('active'); //Remove last active label
+    event.target.classList.add('active'); //show target label as active
+    const basketItemsElem = document.querySelectorAll('.basket-item');
+    basketItemsElem.forEach((item) => {
+      item.classList.remove('hide'); //Show all items on basket
     });
   }
 }
