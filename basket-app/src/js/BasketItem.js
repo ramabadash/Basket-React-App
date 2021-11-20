@@ -14,10 +14,18 @@ export class BasketItem extends Component {
     );
   }
   markAsBought = (event) => {
-    if (event.target.tagName !== 'li') {
-      event.target.closest('li').classList.toggle('bought'); //Click on the li child element
-    } else {
-      event.target.classList.toggle('bought'); //Click on the li element
+    //Not real item - empty list item
+    if (
+      event.target.getAttribute('name') === 'No items in youre basket!' ||
+      event.target.closest('li').getAttribute('name') === 'No items in youre basket!'
+    )
+      return;
+    else {
+      if (event.target.tagName !== 'li') {
+        event.target.closest('li').classList.toggle('bought'); //Click on the li child element
+      } else {
+        event.target.classList.toggle('bought'); //Click on the li element
+      }
     }
   };
 }

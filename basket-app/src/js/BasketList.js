@@ -20,8 +20,12 @@ export class BasketList extends Component {
   generateItemsToBasket() {
     const itemsArr = [];
     const basketItems = this.props.basketItems;
-    for (const item in basketItems) {
-      itemsArr.push(<BasketItem key={item} number={basketItems[item]} item={item} />);
+    if (!!Object.keys(basketItems).length) {
+      for (const item in basketItems) {
+        itemsArr.push(<BasketItem key={item} number={basketItems[item]} item={item} />);
+      }
+    } else {
+      itemsArr.push(<BasketItem key='clear' number='' item='No items in youre basket!' />);
     }
     return itemsArr;
   }
