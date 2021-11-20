@@ -2,6 +2,8 @@ import { Component } from 'react';
 import { groceriesArr } from '../data/groceriesData';
 import { BasketList } from './BasketList';
 import { GroceriesList } from './GroceriesList';
+import { SearchBar } from './SearchBar';
+
 import '../styles/Main.css';
 
 export class Main extends Component {
@@ -11,10 +13,13 @@ export class Main extends Component {
   }
   render() {
     return (
-      <main>
-        <GroceriesList groceriesArr={groceriesArr} onItemClick={this.updateBasket} />
-        <BasketList basketItems={this.state.basketItems} onClearBasket={this.clearBasket} />
-      </main>
+      <>
+        <SearchBar />
+        <main>
+          <GroceriesList groceriesArr={groceriesArr} onItemClick={this.updateBasket} />
+          <BasketList basketItems={this.state.basketItems} onClearBasket={this.clearBasket} />
+        </main>
+      </>
     );
   }
 
@@ -35,7 +40,7 @@ export class Main extends Component {
     this.setState({ basketItems }); //Update basketItems state
   };
 
-  clearBasket = (event) => {
+  clearBasket = () => {
     this.setState({ basketItems: {} });
   };
 }
