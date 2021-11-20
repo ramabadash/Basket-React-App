@@ -9,8 +9,7 @@ export class BasketItem extends Component {
   render() {
     return (
       <li className='basket-item' onClick={this.markAsBought}>
-        <i className='far fa-minus-square'></i>
-        {this.props.number} {this.props.item}
+        <i className='far fa-minus-square'></i> {this.props.number} {this.props.item}
       </li>
     );
   }

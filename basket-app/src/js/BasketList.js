@@ -3,30 +3,23 @@ import { BasketItem } from './BasketItem';
 import '../styles/BasketList.css';
 
 export class BasketList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { basketItems: this.props.basketItems };
-  }
   render() {
     return (
       <div className='basket-container'>
         <h2>
-          <i className='fas fa-shopping-basket logo'></i>
+          <i className='fas fa-shopping-basket'></i>
           Basket:
         </h2>
         <label onClick={() => this.props.onClearBasket()}>
-          <i className='fas fa-trash'></i>
+          <i className='fas fa-trash trash'></i>
         </label>
         <ul className='basket-list'>{this.generateItemsToBasket()}</ul>
       </div>
     );
   }
   generateItemsToBasket() {
-    // this.setState({ basketItems: this.props.basketItems });
-    console.log(this.props.basketItems);
-    console.log(this.state.basketItems);
     const itemsArr = [];
-    const basketItems = this.state.basketItems;
+    const basketItems = this.props.basketItems;
     for (const item in basketItems) {
       itemsArr.push(<BasketItem key={item} number={basketItems[item]} item={item} />);
     }

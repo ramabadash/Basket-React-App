@@ -1,3 +1,7 @@
+h2 {
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+}
 .basket-list {
   list-style: none;
   font-family: 'Staatliches', cursive;
@@ -9,4 +13,13 @@
 .basket-list {
   height: 20em;
   overflow-y: auto;
+}
+.trash {
+  color: brown;
+  font-size: 1.75em;
+  float: right;
+  cursor: pointer;
+}
+.trash:hover {
+  font-size: 1.85em;
 }

@@ -36,7 +36,6 @@ export class Main extends Component {
   };
 
   clearBasket = (event) => {
-    const basketItems = {};
-    this.setState({ basketItems });
+    this.setState({ basketItems: {} });
   };
 }
