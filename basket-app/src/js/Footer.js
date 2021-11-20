@@ -18,3 +18,16 @@ export class Footer extends Component {
       </footer>
     );
   }
+  //Show only bought items
+  showPurchsed(event) {
+    event.target.classList.add('active'); //show label as active
+    const basketItemsElem = document.querySelectorAll('.basket-item');
+    basketItemsElem.forEach((item) => {
+      if (!item.classList.contains('bought')) {
+        item.classList.add('hide');
+      } else {
+        return;
+      }
+    });
+  }
+}
