@@ -10,7 +10,7 @@ export class Footer extends Component {
           All
         </label>
         {', '}
-        <label>Pending</label>
+        <label onClick={this.showPending}>Pending</label>
         {', '}
         <label onClick={this.showPurchsed}>Purchased</label>
         <p>
@@ -40,6 +40,19 @@ export class Footer extends Component {
     const basketItemsElem = document.querySelectorAll('.basket-item');
     basketItemsElem.forEach((item) => {
       item.classList.remove('hide'); //Show all items on basket
+    });
+  }
+  //Show only non-bought items on basket
+  showPending(event) {
+    document.querySelector('.active').classList.remove('active'); //Remove last active label
+    event.target.classList.add('active'); //show target label as active
+    const basketItemsElem = document.querySelectorAll('.basket-item');
+    basketItemsElem.forEach((item) => {
+      if (item.classList.contains('bought')) {
+        item.classList.add('hide');
+      } else {
+        return;
+      }
     });
   }
 }
