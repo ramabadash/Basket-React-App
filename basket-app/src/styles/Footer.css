@@ -1,0 +1,21 @@
+.footer {
+  font-family: 'Staatliches', cursive;
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+label {
+  color: brown;
+  font-size: 1em;
+  cursor: pointer;
+}
+label:hover {
+  color: whitesmoke;
+}
+.active {
+  font-size: 1.05em;
+  text-decoration: underline;
+}
