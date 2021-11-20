@@ -25,6 +25,11 @@ export class Footer extends Component {
     document.querySelector('.active').classList.remove('active'); //Remove last active label
     event.target.classList.add('active'); //show target label as active
     const basketItemsElem = document.querySelectorAll('.basket-item');
+    //Show all basket-items before hiding
+    basketItemsElem.forEach((item) => {
+      item.classList.remove('hide');
+    });
+    //Filter
     basketItemsElem.forEach((item) => {
       if (!item.classList.contains('bought')) {
         item.classList.add('hide');
@@ -47,6 +52,11 @@ export class Footer extends Component {
     document.querySelector('.active').classList.remove('active'); //Remove last active label
     event.target.classList.add('active'); //show target label as active
     const basketItemsElem = document.querySelectorAll('.basket-item');
+    //Show all basket-items before hiding
+    basketItemsElem.forEach((item) => {
+      item.classList.remove('hide');
+    });
+    //Filter
     basketItemsElem.forEach((item) => {
       if (item.classList.contains('bought')) {
         item.classList.add('hide');
